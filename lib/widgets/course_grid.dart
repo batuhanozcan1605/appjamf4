@@ -1,5 +1,7 @@
+import 'package:appjamf4/models/dummy_data.dart';
 import 'package:flutter/material.dart';
 import '../models/course_model.dart';
+import '../screens/screens.dart';
 
 class CourseGrid extends StatelessWidget {
   final String title;
@@ -40,7 +42,7 @@ class CourseGrid extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 final Course course = courseList[index];
                 return GestureDetector(
-                  onTap: () => print(course.name),
+                  onTap: () => navigateSubCoursesOrModules(context, course.subCourseId),
                   child: Card(
 
                     color: Color(course.color),
@@ -53,5 +55,16 @@ class CourseGrid extends StatelessWidget {
         ],
       ),
     );
+  }
+  void navigateSubCoursesOrModules(context, subCourseId) {
+    if(courseList == oyunVeUygulama) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(builder: (BuildContext context) => SubCourses(subCourseId: subCourseId,)));
+    } else {
+      Navigator.push(
+          context,
+          MaterialPageRoute(builder: (BuildContext context) => const ModulesScreen()));
+    }
   }
 }
