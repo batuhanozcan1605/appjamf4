@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "543934709774",
+    "project_id": "appjamf4",
+    "storage_bucket": "appjamf4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543934709774:android:9777906059b8341ea77c5f",
+        "android_client_info": {
+          "package_name": "com.example.appjamf4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543934709774-sqej4321ckeppgdg389dpsqns2mmuen2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9h1J84dpQpHhFp5DHEpzOJi3EwplNjkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543934709774-sqej4321ckeppgdg389dpsqns2mmuen2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
