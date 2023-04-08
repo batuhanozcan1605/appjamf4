@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 class QuestionsScreen extends StatelessWidget {
   const QuestionsScreen({Key? key}) : super(key: key);
 
+
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -32,12 +35,7 @@ class QuestionsScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 20),
-        child: Center(
-          child: Questions(),
-        ),
-      ),
+      body: Container()
     );
   }
 }
