@@ -42,10 +42,27 @@ class CourseGrid extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 final Course course = courseList[index];
                 return GestureDetector(
-                  onTap: () => navigateSubCoursesOrModules(context, course.subCourseId),
+                  onTap: () => navigateSubCoursesOrModules(context, course.subCourseId, course.name),
                   child: Card(
-
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
                     color: Color(course.color),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Flexible(
+                            child: Text(course.name,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                     //buraya text içinde course.name gelecek.
                   ),
                 );
@@ -56,7 +73,7 @@ class CourseGrid extends StatelessWidget {
       ),
     );
   }
-  void navigateSubCoursesOrModules(context, subCourseId) {
+  void navigateSubCoursesOrModules(context, subCourseId, title) {
     if(courseList == oyunVeUygulama) {
       Navigator.push(
           context,
@@ -64,7 +81,7 @@ class CourseGrid extends StatelessWidget {
     } else {
       Navigator.push(
           context,
-          MaterialPageRoute(builder: (BuildContext context) => const ModulesScreen()));
+          MaterialPageRoute(builder: (BuildContext context) => ModulesScreen(title: title)));
     }
   }
 }
