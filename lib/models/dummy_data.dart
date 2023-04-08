@@ -1,5 +1,9 @@
+import 'package:appjamf4/models/question_model.dart';
+import 'package:appjamf4/repository/question_repo.dart';
 import 'course_model.dart';
 import 'module_model.dart';
+
+final List<Question> _questionList = QuestionsRepo().questionList;
 
 //List of Courses
 final List<Course> oyunVeUygulama = [
@@ -8,18 +12,15 @@ final List<Course> oyunVeUygulama = [
   const Course(name: 'Oyun Sanatı', color: 0xFF4283F1, subCourseId: 3),
 ];
 
-final List<Course> coursera = [
-  const Course(name: 'Proje Yönetim Temelleri', color: 0xFFE84335),
-  const Course(name: 'Proje Başlatma: Başarılı Bir Proje Tasarlama', color: 0xFFE84335),
-  const Course(name: 'Proje Başlatma: Tüm Süreçleri Bir Araya Getirmek', color: 0xFFE84335),
-];
-
 final List<Course> girisimcilik = [
   const Course(name: 'Temel Girişimcilik', color: 0xFFecbe12),
   const Course(name: 'Girişimciler için Hukuk', color: 0xFF4283F1),
   const Course(name: 'Girişimciler için Finans', color: 0xFF31ab5c),
   const Course(name: 'Girişimciler için İK', color: 0xFFE84335),
-  const Course(name: 'Girişimciler için İK', color: 0xFFE84335),
+];
+
+final List<Course> ingilizce = [
+  const Course(name: 'Yazılımcılar için İngilizce Eğitimi', color: 0xFF31ab5c),
 ];
 
 //List of SubCourses
@@ -62,7 +63,7 @@ final List<Lesson> flutter2module3 = [
   Lesson(name: "Immutable ve Final"),
 ];
 final List<Lesson> flutter2module4 = [
-  Lesson(name: "Classes"),
+  Lesson(name: "Class'lar", questionList: _questionList),
   Lesson(name: "Referanslar"),
   Lesson(name: "Immutable ve Final"),
   Lesson(name: "Constructor"),
@@ -72,9 +73,5 @@ final List<Lesson> flutter2module5 = [
   Lesson(name: "Referanslar"),
   Lesson(name: "Immutable ve Final"),
 ];
-
-
-//Questions
-
 
 

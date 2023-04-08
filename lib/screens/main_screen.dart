@@ -46,8 +46,14 @@ class MainScreen extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: CourseGrid(
-              title: "Google Proje Yönetim Programı",
-              courseList: coursera,
+              title: "Teknoloji Girişimciliği Eğitimleri",
+              courseList: girisimcilik,
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: CourseGrid(
+              title: "İngilizce",
+              courseList: ingilizce
             ),
           ),
         ],

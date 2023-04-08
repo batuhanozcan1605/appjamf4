@@ -29,7 +29,7 @@ class CourseGrid extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 150, //Bu responsive yapılabilir.
+            height: 150,
             child: GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,

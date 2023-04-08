@@ -3,7 +3,7 @@ import 'package:appjamf4/screens/questions_screen.dart';
 import 'package:flutter/material.dart';
 
 class NestedModuleScroll extends StatelessWidget {
-  final List<Module> moduleList;
+  final List<Module>? moduleList;
   const NestedModuleScroll({super.key, required this.moduleList});
 
   @override
@@ -15,14 +15,14 @@ class NestedModuleScroll extends StatelessWidget {
 
           ];
         },
-        body: ListView.builder(
-          itemCount: moduleList.length,
+        body: moduleList != null ? ListView.builder(
+          itemCount: moduleList!.length,
           itemBuilder: (BuildContext context, int index) {
-            Module module = moduleList[index];
+            Module module = moduleList![index];
             return Container(
               color: const Color(0xF7F8F8F8),
               child: ExpansionTile(
-                title: Text(moduleList[index].name),
+                title: Text(moduleList![index].name),
                 children: [
                   ListView.builder(
                     shrinkWrap: true,
@@ -30,11 +30,12 @@ class NestedModuleScroll extends StatelessWidget {
                       scrollDirection: Axis.vertical,
                       itemCount: module.lessonList.length,
                       itemBuilder: (BuildContext context, int index){
+                      var questionList = module.lessonList[index].questionList;
                         return GestureDetector(
                           onTap: (){
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => QuestionsScreen()));
+                                MaterialPageRoute(builder: (BuildContext context) => QuestionsScreen(questionList: questionList,)));
                           },
                           child: ListTile(
                             leading: const Icon(Icons.mode_comment_rounded, color: Colors.green,),
@@ -48,6 +49,13 @@ class NestedModuleScroll extends StatelessWidget {
               ),
             );
           },
+        ) : ListView.builder(
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+              title: Text('Gelecek Modül $index'),
+            );
+          },
+          itemCount: 20,
         ),
       ),
     );

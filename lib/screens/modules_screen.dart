@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 
 class ModulesScreen extends StatelessWidget {
   final String title;
-  final List<Module> moduleList;
+  final List<Module>? moduleList;
 
-  const ModulesScreen({Key? key, required this.title, required this.moduleList}) : super(key: key);
+  const ModulesScreen({Key? key, required this.title, this.moduleList}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

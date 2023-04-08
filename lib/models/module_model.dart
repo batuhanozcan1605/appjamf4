@@ -1,3 +1,5 @@
+import 'package:appjamf4/models/question_model.dart';
+
 class Module {
   final String name;
   final List<Lesson> lessonList;
@@ -7,7 +9,7 @@ class Module {
 
 class Lesson {
   final String name;
-  final int? fireId;
+  final List<Question>? questionList ;
 
-  Lesson({required this.name, this.fireId});
+  Lesson({required this.name, this.questionList});
 }
