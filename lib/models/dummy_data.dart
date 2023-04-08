@@ -28,26 +28,37 @@ final List<Course> unity = [
 
 //List of Modules
 final List<Module> flutter2 = [
-  Module(name: "Flutter Kurulumu", lesson:  flutter2module1),
-  Module(name: "Dart Dilini ve IDE'yi tanıma", lesson:  flutter2module2),
-  Module(name: "Dart Dilini Derinlemesine tanıma", lesson:  flutter2module3),
-  Module(name: "Dart Dili ile Nesne Tabanlı Programlama", lesson:  flutter2module4),
-  Module(name: "Collection'lar", lesson:  flutter2module5),
+  Module(name: "Flutter Kurulumu", lessonList:  flutter2module1),
+  Module(name: "Dart Dilini ve IDE'yi tanıma", lessonList:  flutter2module2),
+  Module(name: "Dart Dilini Derinlemesine tanıma", lessonList:  flutter2module3),
+  Module(name: "Dart Dili ile Nesne Tabanlı Programlama", lessonList:  flutter2module4),
+  Module(name: "Collection'lar", lessonList:  flutter2module5),
 ];
 
 //List of Lessons
 final List<Lesson> flutter2module1 = [
-
+  Lesson(name: "Class'lar"),
+  Lesson(name: "Referanslar"),
+  Lesson(name: "Immutable ve Final"),
 ];
 final List<Lesson> flutter2module2 = [
-
+  Lesson(name: "Class'lar"),
+  Lesson(name: "Referanslar"),
+  Lesson(name: "Immutable ve Final"),
 ];
 final List<Lesson> flutter2module3 = [
-
+  Lesson(name: "Class'lar"),
+  Lesson(name: "Referanslar"),
+  Lesson(name: "Immutable ve Final"),
 ];
 final List<Lesson> flutter2module4 = [
-
+  Lesson(name: "Classes"),
+  Lesson(name: "Referanslar"),
+  Lesson(name: "Immutable ve Final"),
+  Lesson(name: "Constructor"),
 ];
 final List<Lesson> flutter2module5 = [
-
+  Lesson(name: "Class'lar"),
+  Lesson(name: "Referanslar"),
+  Lesson(name: "Immutable ve Final"),
 ];

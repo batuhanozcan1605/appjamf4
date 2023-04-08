@@ -1,8 +1,8 @@
 class Module {
   final String name;
-  final List<Lesson> lesson;
+  final List<Lesson> lessonList;
 
-  Module({required this.name, required this.lesson});
+  Module({required this.name, required this.lessonList});
 }
 
 class Lesson {
