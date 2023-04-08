@@ -9,18 +9,8 @@ class Questions extends StatefulWidget {
 
 class _QuestionsState extends State<Questions> {
 
-  //final _firestore = FirebaseFirestore.instance;
-
-  @override
-  void initState() {
-    super.initState();
-    //CollectionReference lessonRef = _firestore.collection('f2m4l1');
-  }
-
   @override
   Widget build(BuildContext context) {
-    //8CollectionReference lessonRef = _firestore.collection('f2m4l1');
-    //var questionRef = lessonRef.doc('Gj04ltB7GR7KrXBqe7QT');
 
     return Column(
       children: [

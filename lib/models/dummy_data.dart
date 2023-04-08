@@ -14,6 +14,14 @@ final List<Course> coursera = [
   const Course(name: 'Proje Başlatma: Tüm Süreçleri Bir Araya Getirmek', color: 0xFFE84335),
 ];
 
+final List<Course> girisimcilik = [
+  const Course(name: 'Temel Girişimcilik', color: 0xFFecbe12),
+  const Course(name: 'Girişimciler için Hukuk', color: 0xFF4283F1),
+  const Course(name: 'Girişimciler için Finans', color: 0xFF31ab5c),
+  const Course(name: 'Girişimciler için İK', color: 0xFFE84335),
+  const Course(name: 'Girişimciler için İK', color: 0xFFE84335),
+];
+
 //List of SubCourses
 final List<Course> flutter = [
   const Course(name: 'Flutter Hazırlık', color: 0xFF4283F1),
@@ -37,10 +45,12 @@ final List<Module> flutter2 = [
 
 //List of Lessons
 final List<Lesson> flutter2module1 = [
-  Lesson(name: "Class'lar"),
-  Lesson(name: "Referanslar"),
-  Lesson(name: "Immutable ve Final"),
+  Lesson(name: "Flutter Kurulumu: Flutter SDK"),
+  Lesson(name: "Flutter Kurulumu: PATH Ayarları"),
+  Lesson(name: "Flutter Kurulumu: Android Studio"),
+  Lesson(name: "Flutter Kurulumu: Örnek Proje Yaratma"),
 ];
+
 final List<Lesson> flutter2module2 = [
   Lesson(name: "Class'lar"),
   Lesson(name: "Referanslar"),
@@ -62,3 +72,9 @@ final List<Lesson> flutter2module5 = [
   Lesson(name: "Referanslar"),
   Lesson(name: "Immutable ve Final"),
 ];
+
+
+//Questions
+
+
+
