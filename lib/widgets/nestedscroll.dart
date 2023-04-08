@@ -35,7 +35,9 @@ class NestedModuleScroll extends StatelessWidget {
                           onTap: (){
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => QuestionsScreen(questionList: questionList,)));
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        QuestionsScreen(questionList: questionList, lessonName: module.lessonList[index].name,)));
                           },
                           child: ListTile(
                             leading: const Icon(Icons.mode_comment_rounded, color: Colors.green,),

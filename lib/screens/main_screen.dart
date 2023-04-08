@@ -11,7 +11,7 @@ class MainScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(Icons.menu, color: Color(0xFF9A8F8F)),
+          icon: const Icon(Icons.menu, color: Color(0xFF9A8F8F)),
           onPressed: () {
 
           },

@@ -4,6 +4,7 @@ class Question {
   final String username;
   final int? plus;
   final int? comment;
+  final DateTime? timeStamp;
 
-  Question({required this.title, this.description, required this.username, this.plus, this.comment});
+  Question({required this.title, this.description, required this.username, this.plus, this.comment,this.timeStamp, });
 }

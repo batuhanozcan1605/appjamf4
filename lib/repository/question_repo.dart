@@ -12,6 +12,7 @@ class QuestionsRepo extends ChangeNotifier {
   description: 'Modele constructor oluştururken, this yazdığımda hata alıyorum.',
   plus: 3,
   comment: 2,
+      timeStamp: DateTime.now().subtract(const Duration(days: 2))
   ),
   Question(
   title: 'Classlar',
@@ -19,6 +20,7 @@ class QuestionsRepo extends ChangeNotifier {
   description: 'Modele constructor oluştururken, this yazdığımda hata alıyorum.',
   plus: 0,
   comment: 1,
+    timeStamp: DateTime.now().subtract(const Duration(days: 3))
   ),
   ];
 
@@ -26,5 +28,16 @@ class QuestionsRepo extends ChangeNotifier {
 }
 
 final questionsProvider = ChangeNotifierProvider((ref) => QuestionsRepo());
+
+class PlusCount extends StateNotifier<int> {
+  PlusCount(int state) : super(state);
+
+  void increase() {
+    state++;
+  }
+}
+
+final plusCountProvider = StateNotifierProvider<PlusCount, int>((ref) => PlusCount(0));
+
 
 

@@ -9,7 +9,7 @@ class Questions extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final questionsRepo = ref.watch(questionsProvider);
+
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 20),
@@ -27,7 +27,7 @@ class Questions extends ConsumerWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("", style: TextStyle(
+                child: Text("${question.title}", style: TextStyle(
                   color:Color(0xFF707070),
                   fontWeight: FontWeight.bold
                 ),
@@ -39,7 +39,7 @@ class Questions extends ConsumerWidget {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Flexible(child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, dui sed sodales tempor, nisi leo lobortis velit, vel rhoncus tellus tellus ac enim. Fusce convallisjusto a convallis consequat. Class aptent taciti sociosqu")),
+                Flexible(child: Text("${question.description}")),
               ],
             ),
           ),
@@ -51,11 +51,11 @@ class Questions extends ConsumerWidget {
                   Text("${question.username}"),
                   Padding(
                     padding: const EdgeInsets.all(4.0),
-                    child: Text("timestamp"),
+                    //child: Text("${question.timeStamp}"),
                   ),
                 ],
               ),
-              InteractionRow(),
+              InteractionRow(question: question),
             ],
           ),
         ],
@@ -64,19 +64,22 @@ class Questions extends ConsumerWidget {
   }
 }
 
-class InteractionRow extends StatelessWidget {
+class InteractionRow extends ConsumerWidget {
+  final Question question;
   const InteractionRow({
-    super.key,
+    super.key, required this.question,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final questionsRepo = ref.watch(questionsProvider);
+
     return Row(
       children: [
         Row(
 
           children: [
-            Text("3"),
+            Text("${question.plus}"),
             IconButton(
                 onPressed: (){
 
@@ -86,7 +89,7 @@ class InteractionRow extends StatelessWidget {
         ),
         Row(
           children: [
-            Text("2"),
+            Text("${question.comment}"),
             IconButton(
                 onPressed: (){
 
