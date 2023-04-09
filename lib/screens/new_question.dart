@@ -88,7 +88,7 @@ class NewQuestion extends ConsumerWidget {
                   ),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF9A8F8F),
+                        backgroundColor: Colors.orangeAccent,
                       ),
                       onPressed: () {
                         Question question = Question(

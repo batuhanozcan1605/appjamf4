@@ -3,10 +3,10 @@ class Question {
   final String description;
   final String username;
   int plus;
-  final DateTime? timeStamp;
+  final DateTime? dateTime;
   final List<Answer>? answers;
 
-  Question({required this.title, required this.description, required this.username, required this.plus, this.timeStamp, this.answers, });
+  Question({required this.title, required this.description, required this.username, required this.plus, this.dateTime, this.answers, });
 }
 
 

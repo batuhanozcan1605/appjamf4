@@ -12,7 +12,7 @@ class QuestionsRepo extends ChangeNotifier {
         username: 'Batuhan Özcan',
         description: 'Visual Studio Code maddesinin sonunda uyarı veriyor. Xlint hatasının sebebi bu olabilir mi?',
         plus: 3,
-        timeStamp: DateTime.now().subtract(const Duration(days: 2)),
+        dateTime: DateTime.now().subtract(const Duration(days: 2)),
         answers: AnswerRepo().answerList1,
     ),
     Question(
@@ -20,7 +20,7 @@ class QuestionsRepo extends ChangeNotifier {
         username: 'Meryem',
         description: "Proje dosyalarını D'ye kaydetmem sorun olur mu? SDK'yı C'de kurdum.",
         plus: 0,
-        timeStamp: DateTime.now().subtract(const Duration(days: 3)),
+        dateTime: DateTime.now().subtract(const Duration(days: 3)),
         answers: AnswerRepo().answerList2,
     ),
   ];

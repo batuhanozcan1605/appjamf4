@@ -59,30 +59,27 @@ class AnswerScreen extends ConsumerStatefulWidget {
                 itemCount: widget.answers!.length) : const Text("null"),
           ),
           Container(
+            decoration: BoxDecoration(
+              color: Colors.orangeAccent,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(28.0),
+                topRight: Radius.circular(28.0),)
+            ),
             height: 76,
-            color: const Color(0x809a8f8f),
+
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(
-                      height: 42,
-                      width: 42,
-                      decoration: BoxDecoration(
-                        color: const Color(0xffffffff),
-                        borderRadius:
-                        BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        border: Border.all(
-                            width: 1.0, color: const Color(0xff707070)),
-                      ),
-                    ),
+
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
                         child: TextField(
                           controller: _controller,
+                          cursorColor: Colors.black87,
                           decoration: InputDecoration(
                             hintText: "Yanıtınızı ekleyin.",
                           ),

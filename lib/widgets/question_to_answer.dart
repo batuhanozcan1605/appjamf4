@@ -22,6 +22,7 @@ class QuestionToAnswer extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
                   border: Border.all(width: 1.0, color: const Color(0xff707070)),
                 ),
+                child: Image.asset('images/google_icon.png'),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
