@@ -96,7 +96,7 @@ class NewQuestion extends ConsumerWidget {
                             description: controller2.text,
                             username: "Admin",
                             plus: 0,
-                            comment: 0);
+                            answers: []);
                         ref.read(questionsProvider).addQuestion(question);
                         Navigator.pop(context);
                       },

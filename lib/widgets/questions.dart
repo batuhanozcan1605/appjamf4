@@ -90,7 +90,7 @@ class InteractionRow extends ConsumerWidget {
         ),
         Row(
           children: [
-            Text("${question.comment}"),
+            question.answers == null ? Text("0") : Text("${question.answers!.length}"),
             IconButton(
                 onPressed: (){
 

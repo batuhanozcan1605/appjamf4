@@ -3,8 +3,17 @@ class Question {
   final String description;
   final String username;
   final int plus;
-  final int comment;
+  final DateTime? timeStamp;
+  final List<Answer>? answers;
+
+  Question({required this.title, required this.description, required this.username, required this.plus, this.timeStamp, this.answers, });
+}
+
+
+class Answer {
+  final String username;
+  final String description;
   final DateTime? timeStamp;
 
-  Question({required this.title, required this.description, required this.username, required this.plus, required this.comment,this.timeStamp, });
+  Answer({required this.username, required this.description, this.timeStamp});
 }
