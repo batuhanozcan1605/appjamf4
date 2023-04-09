@@ -58,6 +58,7 @@ class OpenQuestionScreen extends ConsumerWidget {
                 MaterialPageRoute(
                     builder: (BuildContext context) => NewQuestion()));
           }),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

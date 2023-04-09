@@ -71,14 +71,18 @@ final List<Lesson> flutter2module1 = [
 ];
 
 final List<Lesson> flutter2module2 = [
-  Lesson(name: "Class'lar"),
-  Lesson(name: "Referanslar"),
-  Lesson(name: "Immutable ve Final"),
+  Lesson(name: "Flutter Örnek Proje"),
+  Lesson(name: "Flutter ve Dart Uygulamaları"),
+  Lesson(name: "Değişkenler ve Fonksiyonlar"),
+  Lesson(name: "Fonksiyonlar"),
 ];
 final List<Lesson> flutter2module3 = [
-  Lesson(name: "Class'lar"),
-  Lesson(name: "Referanslar"),
-  Lesson(name: "Immutable ve Final"),
+  Lesson(name: "Değişkenler ve Veri Türleri"),
+  Lesson(name: "Ardışık Çalışma ve Akış Kontrolü"),
+  Lesson(name: "List, Set ve Map"),
+  Lesson(name: "Nesneler ve Referanslar"),
+  Lesson(name: "Class"),
+  Lesson(name: "Null Safety"),
 ];
 final List<Lesson> flutter2module4 = [
   Lesson(name: "Class'lar"),

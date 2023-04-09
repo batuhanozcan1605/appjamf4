@@ -24,6 +24,7 @@ class NestedModuleScroll extends StatelessWidget {
             return Container(
               color: const Color(0xF7F8F8F8),
               child: ExpansionTile(
+                backgroundColor: Color(0xF7F8F8F8),
                 title: Text(moduleList![index].name),
                 children: [
                   ListView.builder(
