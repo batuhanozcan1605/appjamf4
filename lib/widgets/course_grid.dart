@@ -6,13 +6,14 @@ import '../screens/screens.dart';
 class CourseGrid extends StatelessWidget {
   final String title;
   final List<Course> courseList;
+  final double height;
 
-  const CourseGrid({Key? key, required this.title, required this.courseList}) : super(key: key);
+  const CourseGrid({Key? key, required this.title, required this.courseList, required this.height}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 21.0),
+      padding: const EdgeInsets.symmetric(vertical: 5.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -29,7 +30,7 @@ class CourseGrid extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 150,
+            height: height,
             child: GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,

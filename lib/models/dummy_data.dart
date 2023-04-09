@@ -32,9 +32,9 @@ final List<Course> oyunVeUygulama = [
 
 final List<Course> girisimcilik = [
   const Course(name: 'Temel Girişimcilik', color: 0xFFecbe12),
-  const Course(name: 'Girişimciler için Hukuk', color: 0xFF4283F1),
-  const Course(name: 'Girişimciler için Finans', color: 0xFF31ab5c),
-  const Course(name: 'Girişimciler için İK', color: 0xFFE84335),
+  const Course(name: 'Girişimciler için Hukuk', color: 0xFFE84335),
+  const Course(name: 'Girişimciler için Finans', color: 0xFF4283F1),
+  const Course(name: 'Girişimciler için İK', color: 0xFF31ab5c),
 ];
 
 final List<Course> ingilizce = [

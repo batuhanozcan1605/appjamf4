@@ -37,7 +37,7 @@ class Questions extends ConsumerWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 6),
+            padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 4),
             child: Row(
               children: [
                 Flexible(child: Text("${question.description}")),

@@ -38,20 +38,24 @@ class MainScreen extends StatelessWidget {
       ),
       body: CustomScrollView(
         slivers: [
+          const SliverPadding(padding: const EdgeInsets.only(top: 8.0),),
           SliverToBoxAdapter(
             child: CourseGrid(
+              height: 150,
               title: "Oyun ve Uygulama Geliştirme Eğitimleri",
               courseList: oyunVeUygulama,
             ),
           ),
           SliverToBoxAdapter(
             child: CourseGrid(
+              height: 300,
               title: "Teknoloji Girişimciliği Eğitimleri",
               courseList: girisimcilik,
             ),
           ),
           SliverToBoxAdapter(
             child: CourseGrid(
+              height: 150,
               title: "İngilizce",
               courseList: ingilizce
             ),

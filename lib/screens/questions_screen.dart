@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/question_model.dart';
 import '../repository/question_repo.dart';
+import '../widgets/custom_appbar.dart';
 
 class QuestionsScreen extends StatelessWidget {
   const QuestionsScreen({Key? key, this.questionList, required this.lessonName}) : super(key: key);
@@ -12,40 +13,17 @@ class QuestionsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
+    final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        leading: const BackButton(
-          color: Color(0xFF9A8F8F),
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.notifications, color: Color(0xFF9A8F8F),),
-            onPressed: () {
-
-            },
-          ),
-        ],
-        title: Center(
-          child: GestureDetector(
-            onTap: (){
-
-            },
-            child: Image.asset(
-              'images/logo.png',
-              height: 30,
-            ),
-          ),
-        ),
-      ),
+      appBar: PreferredSize(preferredSize: Size(screenSize.width, 50),
+        child: const CustomAppBar(),),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
             height: 70,
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 border: Border(
                   bottom: BorderSide(width: 1.0, color: Colors.grey)
                 )
@@ -73,7 +51,24 @@ class QuestionsScreen extends StatelessWidget {
                 itemCount: questionList!.length),
           ) : Padding(
             padding: const EdgeInsets.only(top: 100),
-            child: const Center(child: Text("Coming Soon!"),),
+            child: Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+               children: const [
+                Flexible(
+                  child: Text(
+                    'Bu sayfa bakımda. Soru girmek için lütfen şu derse gidin:\n \nFlutter ile Uyguluma Geliştirme >\n      Flutter ile Uyguluma Geliştirme Eğitimleri > \nFlutter Kurulumu: Flutter SDK ',
+                    style: TextStyle(
+                      fontFamily: 'Segoe UI',
+                      fontSize: 14,
+                      color: Color(0xff707070),
+                    ),
+                    textAlign: TextAlign.center,
+                  )
+                ),
+              ],
+            ),),
+
           )
         ],
       ),

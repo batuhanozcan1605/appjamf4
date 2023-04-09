@@ -2,6 +2,7 @@ import 'package:appjamf4/models/question_model.dart';
 import 'package:appjamf4/repository/question_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../widgets/custom_appbar.dart';
 import '../widgets/widgets.dart';
 import 'new_question.dart';
 
@@ -11,33 +12,10 @@ class OpenQuestionScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final questionsRepo = ref.watch(questionsProvider);
-
+    final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        leading: const BackButton(
-          color: Color(0xFF9A8F8F),
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.notifications, color: Color(0xFF9A8F8F),),
-            onPressed: () {
-
-            },
-          ),
-        ],
-        title: Center(
-          child: GestureDetector(
-            onTap: (){
-
-            },
-            child: Image.asset(
-              'images/logo.png',
-              height: 30,
-            ),
-          ),
-        ),
-      ),
+      appBar: PreferredSize(preferredSize: Size(screenSize.width, 50),
+        child: const CustomAppBar(),),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

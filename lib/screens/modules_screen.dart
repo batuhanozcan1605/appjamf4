@@ -1,5 +1,7 @@
 import 'package:appjamf4/models/course_model.dart';
 import 'package:appjamf4/models/module_model.dart';
+import 'package:appjamf4/screens/screens.dart';
+import 'package:appjamf4/widgets/custom_appbar.dart';
 import 'package:appjamf4/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,32 +14,10 @@ class ModulesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        leading: const BackButton(
-          color: Color(0xFF9A8F8F),
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.notifications, color: Color(0xFF9A8F8F),),
-            onPressed: () {
-
-            },
-          ),
-        ],
-        title: Center(
-          child: GestureDetector(
-            onTap: (){
-
-            },
-            child: Image.asset(
-              'images/logo.png',
-              height: 30,
-            ),
-          ),
-        ),
-      ),
+      appBar: PreferredSize(preferredSize: Size(screenSize.width, 50),
+        child: const CustomAppBar(),),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
         child: Column(
