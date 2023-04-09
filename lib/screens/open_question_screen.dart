@@ -43,7 +43,7 @@ class OpenQuestionScreen extends ConsumerWidget {
 
         Expanded(
           child: ListView.separated(
-              itemBuilder: (context, index) => Questions(questionsRepo.questionList[index]),
+              itemBuilder: (context, index) => Questions(questionsRepo.questionList[index], questionIndex: index,),
               separatorBuilder: (context, index) => const Divider(),
               itemCount: questionsRepo.questionList.length),
         )

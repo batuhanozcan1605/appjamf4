@@ -1,11 +1,13 @@
 import 'package:appjamf4/repository/question_repo.dart';
+import 'package:appjamf4/screens/answer_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/question_model.dart';
 
 class Questions extends ConsumerWidget {
-  const Questions(this.question, {Key? key}) : super(key: key);
+  const Questions(this.question,  {Key? key, required this.questionIndex,}) : super(key: key);
   final Question question;
+  final int questionIndex;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -56,7 +58,7 @@ class Questions extends ConsumerWidget {
                   ),
                 ],
               ),
-              InteractionRow(question: question),
+              InteractionRow(question: question, questionIndex: questionIndex,),
             ],
           ),
         ],
@@ -67,8 +69,9 @@ class Questions extends ConsumerWidget {
 
 class InteractionRow extends ConsumerWidget {
   final Question question;
-  const InteractionRow({
-    super.key, required this.question,
+  final int questionIndex;
+  const InteractionRow( {
+    super.key, required this.question, required this.questionIndex,
   });
 
   @override
@@ -90,10 +93,13 @@ class InteractionRow extends ConsumerWidget {
         ),
         Row(
           children: [
-            question.answers == null ? Text("0") : Text("${question.answers!.length}"),
+            question.answers == null ? const Text("0") : Text("${question.answers!.length}"),
             IconButton(
                 onPressed: (){
-
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => AnswerScreen(answers: question.answers, question: question, questionIndex: questionIndex,)));
                 },
                 icon: Icon(Icons.mode_comment_rounded, color: Color(0xFF707070),))
           ],

@@ -18,6 +18,7 @@ class SubCourses extends StatelessWidget
         child: const CustomAppBar(),),
       body: CustomScrollView(
         slivers: [
+          const SliverPadding(padding: EdgeInsets.only(top: 8.0),),
           if(subCourseId==1)
           SliverToBoxAdapter(
             child: CourseGrid(

@@ -30,7 +30,12 @@ class QuestionsRepo extends ChangeNotifier {
     questionList.add(question);
     notifyListeners();
   }
+  void addAnswer(Answer answer, int questionIndex) {
+    questionList[questionIndex].answers?.add(answer);
+    notifyListeners();
+  }
 }
+
 
 final questionsProvider = ChangeNotifierProvider((ref) => QuestionsRepo());
 

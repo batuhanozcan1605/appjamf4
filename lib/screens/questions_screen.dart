@@ -45,7 +45,7 @@ class QuestionsScreen extends StatelessWidget {
           questionList != null ? Expanded(
             child: ListView.separated(
                 itemBuilder: (context, index) => Questions(
-                  questionList![index],
+                  questionList![index], questionIndex: index,
                 ),
                 separatorBuilder: (context, index) => const Divider(),
                 itemCount: questionList!.length),
