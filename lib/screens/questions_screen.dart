@@ -78,6 +78,7 @@ class QuestionsScreen extends StatelessWidget {
           onPressed: (){
 
           }),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

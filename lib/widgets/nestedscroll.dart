@@ -1,6 +1,7 @@
 import 'package:appjamf4/models/module_model.dart';
 import 'package:appjamf4/screens/questions_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../screens/open_question_screen.dart';
 
@@ -22,8 +23,16 @@ class NestedModuleScroll extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             Module module = moduleList![index];
             return Container(
-              color: const Color(0xF7F8F8F8),
+              decoration: BoxDecoration(
+                color: const Color(0xF7F8F8F8),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(28.0),
+                  bottomRight: Radius.circular(28.0),
+                ),
+              ),
+
               child: ExpansionTile(
+                collapsedBackgroundColor: Color(0xF7F8F8F8),
                 backgroundColor: Color(0xF7F8F8F8),
                 title: Text(moduleList![index].name),
                 children: [
@@ -52,11 +61,11 @@ class NestedModuleScroll extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          OpenQuestionScreen()));
+                                          const OpenQuestionScreen()));
                             }
                             },
                           child: ListTile(
-                            leading: const Icon(Icons.mode_comment_rounded, color: Colors.green,),
+                            leading: SvgPicture.asset('images/greencomment.svg'),
                             trailing: const Icon(Icons.arrow_forward_ios_rounded),
                             title: Text(module.lessonList[index].name),
                           ),
