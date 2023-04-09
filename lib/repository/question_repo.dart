@@ -34,6 +34,25 @@ class QuestionsRepo extends ChangeNotifier {
     questionList[questionIndex].answers?.add(answer);
     notifyListeners();
   }
+
+  final Set<int> questionIndexSet = {};
+
+  void plus1(index, bool isPlus){
+
+    if(isPlus){
+      questionList[index].plus = questionList[index].plus - 1;
+      questionIndexSet.remove(index);
+    } else {
+      questionList[index].plus = questionList[index].plus + 1;
+      questionIndexSet.add(index);
+    }
+    notifyListeners();
+  }
+
+  bool isPlus(index) {
+    return questionIndexSet.contains(index);
+  }
+
 }
 
 

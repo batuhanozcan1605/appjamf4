@@ -20,14 +20,14 @@ class OpenQuestionScreen extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
         SizedBox(
-        height: 70,
-        child: Container(
-          decoration: BoxDecoration(
+         height: 70,
+         child: Container(
+          decoration: const BoxDecoration(
               border: Border(
                   bottom: BorderSide(width: 1.0, color: Colors.grey)
               )
           ),
-          child: Center(
+          child: const Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 6),
               child: Text(

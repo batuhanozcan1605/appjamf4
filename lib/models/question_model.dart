@@ -2,7 +2,7 @@ class Question {
   final String title;
   final String description;
   final String username;
-  final int plus;
+  int plus;
   final DateTime? timeStamp;
   final List<Answer>? answers;
 

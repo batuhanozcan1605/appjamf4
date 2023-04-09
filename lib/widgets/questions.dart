@@ -77,18 +77,19 @@ class InteractionRow extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final questionsRepo = ref.watch(questionsProvider);
+    bool isPlus = ref.watch(questionsProvider).isPlus(questionIndex);
 
     return Row(
       children: [
         Row(
 
           children: [
-            Text("${question.plus}"),
+            Text("${ref.watch(questionsProvider).questionList[questionIndex].plus}", style: TextStyle(color: isPlus ? Colors.orange : Color(0xFF707070)),),
             IconButton(
                 onPressed: (){
-
+                  ref.read(questionsProvider).plus1(questionIndex, isPlus);
                  },
-                icon: Icon(Icons.add_circle, color: Color(0xFF707070),))
+                icon: Icon(Icons.add_circle, color: isPlus ? Colors.orange :  Color(0xFF707070),))
           ],
         ),
         Row(

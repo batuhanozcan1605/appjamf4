@@ -15,10 +15,7 @@ class AnswerRepo extends ChangeNotifier{
 
   ];
 
-  void addAnswer1(Answer answer) {
-   answerList1.add(answer);
-   notifyListeners();
-  }
+
 
 }
 
