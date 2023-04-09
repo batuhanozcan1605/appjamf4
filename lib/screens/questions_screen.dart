@@ -1,3 +1,4 @@
+import 'package:appjamf4/screens/new_question.dart';
 import 'package:appjamf4/widgets/questions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -72,7 +73,7 @@ class QuestionsScreen extends StatelessWidget {
                 itemCount: questionList!.length),
           ) : Padding(
             padding: const EdgeInsets.only(top: 100),
-            child: const Center(child: Text("NULL"),),
+            child: const Center(child: Text("Coming Soon!"),),
           )
         ],
       ),

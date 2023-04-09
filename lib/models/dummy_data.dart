@@ -3,7 +3,25 @@ import 'package:appjamf4/repository/question_repo.dart';
 import 'course_model.dart';
 import 'module_model.dart';
 
-final List<Question> _questionList = QuestionsRepo().questionList;
+//final List<Question> _questionList = QuestionsRepo().questionList;
+/*final List<Question> _questionList = [
+  Question(
+      title: 'Constructor',
+      username: 'Batuhan Özcan',
+      description: 'Modele constructor oluştururken, this yazdığımda hata alıyorum.',
+      plus: 3,
+      comment: 2,
+      timeStamp: DateTime.now().subtract(const Duration(days: 2))
+  ),
+  Question(
+      title: 'Classlar',
+      username: 'Meryem',
+      description: 'Modele constructor oluştururken, this yazdığımda hata alıyorum.',
+      plus: 0,
+      comment: 1,
+      timeStamp: DateTime.now().subtract(const Duration(days: 3))
+  ),
+];*/
 
 //List of Courses
 final List<Course> oyunVeUygulama = [
@@ -46,7 +64,7 @@ final List<Module> flutter2 = [
 
 //List of Lessons
 final List<Lesson> flutter2module1 = [
-  Lesson(name: "Flutter Kurulumu: Flutter SDK"),
+  Lesson(name: "Flutter Kurulumu: Flutter SDK", questionList: [] ),
   Lesson(name: "Flutter Kurulumu: PATH Ayarları"),
   Lesson(name: "Flutter Kurulumu: Android Studio"),
   Lesson(name: "Flutter Kurulumu: Örnek Proje Yaratma"),
@@ -63,7 +81,7 @@ final List<Lesson> flutter2module3 = [
   Lesson(name: "Immutable ve Final"),
 ];
 final List<Lesson> flutter2module4 = [
-  Lesson(name: "Class'lar", questionList: _questionList),
+  Lesson(name: "Class'lar"),
   Lesson(name: "Referanslar"),
   Lesson(name: "Immutable ve Final"),
   Lesson(name: "Constructor"),

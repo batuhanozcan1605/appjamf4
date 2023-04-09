@@ -2,6 +2,8 @@ import 'package:appjamf4/models/module_model.dart';
 import 'package:appjamf4/screens/questions_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../screens/open_question_screen.dart';
+
 class NestedModuleScroll extends StatelessWidget {
   final List<Module>? moduleList;
   const NestedModuleScroll({super.key, required this.moduleList});
@@ -33,12 +35,25 @@ class NestedModuleScroll extends StatelessWidget {
                       var questionList = module.lessonList[index].questionList;
                         return GestureDetector(
                           onTap: (){
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        QuestionsScreen(questionList: questionList, lessonName: module.lessonList[index].name,)));
-                          },
+                            if(module.lessonList[index].questionList == null) {
+                              print("closed");
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          QuestionsScreen(
+                                            questionList: questionList,
+                                            lessonName: module.lessonList[index]
+                                                .name,)));
+                            } else {
+                              print("open");
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          OpenQuestionScreen()));
+                            }
+                            },
                           child: ListTile(
                             leading: const Icon(Icons.mode_comment_rounded, color: Colors.green,),
                             trailing: const Icon(Icons.arrow_forward_ios_rounded),
@@ -61,5 +76,6 @@ class NestedModuleScroll extends StatelessWidget {
         ),
       ),
     );
+
   }
 }
